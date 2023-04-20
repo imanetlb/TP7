@@ -1,0 +1,30 @@
+
+3)
+Il y a un champ de saisie de texte pour entrer votre nom, et un bouton "Envoyer" 
+Lorsqu'un utilisateur saisit son nom dans le champ de texte et clique sur le bouton "Envoyer", la page "page2.php" traitera la requête POST et renverra un message de salutation avec le nom de l'utilisateur
+
+6)
+Le code PHP présent dans la page "page4.php" a pour objectifde filtrer et de renvoyer une liste de suggestions de pays basées sur une chaîne de requête donnée ($q). L'objectif principal de ce code est de fournir des suggestions de pays en fonction de la correspondance partielle de la chaîne de requête avec le nom des pays.
+
+7)
+ <?php
+$capitales = array( "Italy"=>"Rome", "Luxembourg"=>"Luxembourg", "Belgium"=> "Brussels", "Denmark"=>"Copenhagen", "Finland"=>"Helsinki", "France" => "Paris", "Slovakia"=>"Bratislava", "Slovenia"=>"Ljubljana", "Germany" => "Berlin", "Greece" => "Athens", "Ireland"=>"Dublin", "Netherlands"=>"Amsterdam", "Portugal"=>"Lisbon", "Spain"=>"Madrid", "Sweden"=>"Stockholm", "United Kingdom"=>"London", "Cyprus"=>"Nicosia", "Lithuania"=>"Vilnius", "Czech Republic"=>"Prague", "Estonia"=>"Tallin", "Hungary"=>"Budapest", "Latvia"=>"Riga","Malta"=>"Valetta", "Austria" => "Vienna", "Poland"=>"Warsaw") ; 
+
+$q = $_REQUEST["q"];
+
+$capitales = "";
+
+if ($q !== "") {
+    $q = strtolower($q);
+
+    foreach ($capitales as $country => $cap) {
+        if (strtolower($country) === $q) {
+            $capitales = $cap;
+            break;
+        }
+    }
+}
+
+echo $capitales === "" ? "no suggestion" : $capitales;
+
+?>
