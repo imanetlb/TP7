@@ -1,0 +1,29 @@
+"produits": [
+    {
+      "code": "AZ320",
+      "nom": "Ordinateur",
+      "prix": "750"
+    },
+    {
+      "code": "LM208",
+      "nom": "Chaise",
+      "prix": "63"
+    },
+    {
+      "code": "KL504",
+      "nom": "Téléphone",
+      "prix": "450"
+    },
+    {
+      "code": "PT215",
+      "nom": "Table",
+      "prix": "300"
+    },
+    {
+      "code": "SR894",
+      "nom": "Casque",
+      "prix": "120"
+    }
+  ]
+}
+
